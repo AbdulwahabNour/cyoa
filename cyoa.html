@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <h1>{{.Title}}</h1>
+    {{range .Story}}
+    <p>{{.}}</p>
+    {{end}}
+    {{if .Options}}
+    <ul>
+        {{range .Options}}
+
+        <li><a href="/{{.Arc}}"> {{.Text}}</a></li>
+        {{end}}
+    </ul>
+    {{else}}
+    <p>The end</p>
+    <a href="/intro">Start over</a>
+    {{end}}
+
+</body>
+
+</html>
